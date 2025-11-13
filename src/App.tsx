@@ -51,8 +51,11 @@ function App() {
         </header>
 
         <Card>
-          <CardHeader>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0">
             <CardTitle>Paste Gemini/AI output</CardTitle>
+            <Button disabled={!hasEquations || busy} onClick={onDownload} variant="secondary">
+              {busy ? 'Building…' : 'Download DOCX'}
+            </Button>
           </CardHeader>
           <CardContent className="space-y-3">
             <Textarea
