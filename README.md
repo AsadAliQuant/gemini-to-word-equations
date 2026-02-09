@@ -34,10 +34,12 @@ Designed for students, teachers, researchers, and anyone who wants to paste AI m
 
 ## 🖥️ Tech Stack
 
-- HTML / CSS / JavaScript
-- Client-side LaTeX parsing
-- Word-compatible equation rendering (OMML via HTML)
-- No server, no database, no API keys
+- **React** — component-based UI
+- **Vite** — fast dev server & build tool
+- **shadcn/ui** — accessible, modern UI components
+- **TypeScript (optional)**  
+- **Client-side math parsing & conversion**
+- **No backend / no APIs**
 
 ---
 
