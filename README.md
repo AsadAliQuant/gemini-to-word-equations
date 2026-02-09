@@ -1,73 +1,51 @@
-# React + TypeScript + Vite
+# Gemini → Word Equation Converter (for Mathematics & Statistics)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A 100% browser-based web tool that converts AI-generated mathematical equations (from Gemini or any LLM) into **Microsoft Word–compatible equation format**.
 
-Currently, two official plugins are available:
+Designed for students, teachers, researchers, and anyone who wants to paste AI math output directly into **Word (.docx)** without broken formatting.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 📋 Paste math output from **Gemini / ChatGPT / any AI**
+- 🔢 Supports:
+  - Inline equations: `$ ... $`
+  - Block equations: `$$ ... $$`
+- 🧠 Converts LaTeX-style math into **Word Equation (OMML-friendly HTML)**
+- 👀 Live preview before exporting
+- 📄 Copy HTML ready to paste into Microsoft Word
+- ⬇️ Download as `.docx`
+- 🔒 **100% client-side** — no data uploaded, no backend
+- ⚡ Fast, lightweight, and free
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧩 How It Works
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. Paste AI-generated math content into the input box  
+2. Click **Convert for Word**
+3. Preview the formatted equations
+4. Either:
+   - Copy **Word-compatible HTML**
+   - Or download a ready-to-use **DOCX file**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🖥️ Tech Stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- HTML / CSS / JavaScript
+- Client-side LaTeX parsing
+- Word-compatible equation rendering (OMML via HTML)
+- No server, no database, no API keys
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📌 Example Input
+
+```text
+The quadratic formula is given by:
+
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
